@@ -1,0 +1,101 @@
+/* Section */
+section {
+  margin: 2rem 0;
+  padding: 2rem 10%;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* Image */
+.img {
+  display: flex;
+  height: 34rem;
+  width: 45%;
+  background-image: url(../imagens/empresa.jpg);
+  background-position: 50%;
+  background-size: cover;
+}
+
+/* Text */
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 45%;
+  gap: 2.8rem;
+
+  & h2 {
+    font-size: var(--font-size-large);
+    color: var(--color-brown);
+  }
+
+  & p {
+    text-wrap: balance;
+  }
+
+  & a {
+    padding: 1.6rem;
+    font-weight: 700;
+    background-color: var(--color-brown);
+    border: .2rem solid var(--color-brown);
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--color-brown);
+      background-color: var(--color-white);
+    }
+  }
+}
+
+/* Card List */
+.card-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  padding: 0.8rem 0;
+  gap: 1.2rem;
+  border: 0.1rem dotted var(--color-brown);
+  text-align: center;
+  transition: var(--transition);
+
+  &:hover {
+    transform: scale(1.08);
+  }
+
+  & h3 {
+    color: var(--color-brown);
+  }
+}
+
+/* Responsive */
+@media (width <= 1000px) {
+  .card {
+    width: 40%;
+  }
+}
+
+@media (width <= 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .img, .text {
+    width: 100%;
+  }
+}

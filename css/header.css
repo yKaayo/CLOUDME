@@ -1,0 +1,50 @@
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 10%;
+    background-color: var(--color-brown);
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    & h1 {
+        font-size: var(--font-size-large);
+        color: var(--color-white);
+    }
+}
+
+/* Navigation */
+nav {
+    & ul {
+        display: flex;
+        gap: 4rem;
+
+        & a {
+            transition: var(--transition);
+            
+            &:hover {
+                color: var(--color-light-brown);
+            }
+        }
+    }
+}
+
+/* Responsive */
+@media (width <= 800px) {
+    header {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (width <= 415px) {
+    nav {
+        display: none;
+    }
+}
